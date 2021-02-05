@@ -92,7 +92,7 @@ const Projects = () => {
     </div>
     <p>Platform to help Londoners live a greener life by exploring and listing businesses that help reduce carbon footprint.</p>
     <p>Split between solo and pair programming.</p>
-    <p>I extensively worked on the seeding mechanics, running our local seed items through an external API, and adding 850 external entries. Furthermore I was responsible for the AddLocation page Built and the necessary 2-step POST process, to pull coordinates via one API before posting items to our own database.</p>
+    <p>I extensively worked on the seeding mechanics, running our local seed items through an external API, and adding 850 external entries. Furthermore, I was responsible for the AddLocation page Built and the necessary 2-step POST process, to pull coordinates via one API before posting items to our own database.</p>
     <div className="buttons">
       <a href='https://flows-project-3.herokuapp.com/' target="_blank"><button>Website</button></a>
       <a href='https://github.com/florian-wilisch/project-3' target="_blank"><button className='green'>GitHub</button></a>
@@ -123,7 +123,7 @@ const Projects = () => {
     </div>
     <p>Music site to discover music charts and artists from around the world.</p>
     <p>Split between solo and pair programming.</p>
-    <p>I focused on displaying the charts dynamically after GETting data via the Deezer API. Furthermore I worked on the audio snippet functionality.</p>
+    <p>I focused on displaying the charts dynamically after GETting data via the Deezer API. Furthermore, I worked on the audio snippet functionality.</p>
 
     <div className="buttons">
       <a href='https://florian-wilisch.github.io/project-2' target="_blank"><button>Website</button></a>
@@ -158,7 +158,7 @@ const Projects = () => {
         </div>
       </div>
     <p>We were given a choice between 10 grid-based games and Pac-Man was in the hardest tier.</p>
-    <p>I implemented a pathfinding algorithm and then tweaked it to give each ghost a different "character". Here I made extensive use of 'toggle' or 'counter' variables, effectively to control state (before having learnt React).</p>
+    <p>I implemented a pathfinding algorithm and then tweaked it to give each ghost a different "character". Here, I made extensive use of 'toggle' or 'counter' variables, effectively to control state (before having learnt React).</p>
 
     <div className="buttons">
       <a href='https://florian-wilisch.github.io/project-1' target="_blank"><button>Website</button></a>
