@@ -14,8 +14,8 @@ import './style.scss'
 
 function App() {
   return (
-    <div className="App">
-
+    // <div className="App">
+<>
         {/* <HashRouter hashType='noslash'>
           <Navbar/>        
             <Hero/>      
@@ -41,7 +41,8 @@ function App() {
           </Switch>
         </BrowserRouter>
     
-    </div>
+    {/* // </div> */}
+    </>
   );
 }
 

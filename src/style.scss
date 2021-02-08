@@ -17,8 +17,6 @@ body, html {
   color: var(--ebony);
   background-color: var(--mistyBlue);
   width: 100%;
-  // width: 100vw;
-  // left: 0;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -27,14 +25,15 @@ body, html {
   text-align: center;
   margin: 0;
   padding: 0;
-  // overflow-x: hidden;
+  overflow-x: hidden;
   font-weight: 200;
   scroll-behavior: smooth;
 }
 
 body {
-  // width: 375px;
+  position: relative
 }
+
 
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
@@ -66,12 +65,8 @@ header {
   font-family: 'Playfair Display', serif;
   width: 100%;
   position: absolute;
-  // top: calc(100vh - 90px);
   top: 0;
   left: 0;
-  // background: var(--darkBlue);
-  // color: var(--gold);
-  // z-index: 9;
 }
 
 .navigation{
@@ -83,13 +78,10 @@ header {
 
 
   .logo {
-    // position: absolute;
     width: 70px;
-    // left: 0;
-    // position: center;
     display: flex;
     align-items: center;
-    // align-self: flex-start;
+
     img {
       width: 100%;
       margin: 0 15px;
@@ -101,8 +93,6 @@ header {
   }
 
   .hamburger-react {
-    // right: 0;
-    // visibility: 0;
     display: none;
   }
 
@@ -117,18 +107,11 @@ header {
     flex-wrap: nowrap;
     justify-content: flex-end;
     align-items: center;
-    // padding-right: 15px;
     margin: 0;
 
     div {
-
-      // height: 60px;
       display: flex;
-      // flex-direction: row;
-    // flex-wrap: nowrap;
-    // justify-content: flex-end;
       align-items: center;
-      // border: solid 1px black;
     }
   }
 
@@ -137,10 +120,7 @@ header {
     font-size: 25px;
     padding: 0 15px;
     display: flex;
-    // flex-direction: row;
-    // flex-wrap: nowrap;
     justify-content: center;
-    // align-items: center;
     height: 100%;
   }
 
@@ -154,12 +134,10 @@ header {
   }
 
   ul a:hover {
-    // height: 60px;
     border-top: 4px solid rgb(162, 162, 162);
   }
 
   .active {
-    // top: 0;
     border-top: 4px solid var(--darkYellow);
   }
 
@@ -168,8 +146,6 @@ header {
 .blur {
   position: absolute;
   backdrop-filter: blur(5px);
-  // box-shadow: 0 0 50px;
-  // filter: blur(8px);
   width: 100%;
   height: 60px;
   z-index: -1;
@@ -184,7 +160,6 @@ button {
   text-align: center;
   text-decoration: none;
   display: block;
-  // flex-basis: auto;
   width: min-content;
   font-size: 16px;
   margin: 4px 2px;
@@ -193,9 +168,7 @@ button {
 
 button:hover {
   color: var(--forestGreen);
-  background-color: var(--darkYellow);
-  // opacity: 0.7; 
-  // font-weight: 700; 
+  background-color: var(--darkYellow); 
 }
 
 .green:hover {
@@ -205,33 +178,21 @@ button:hover {
 }
 
 .podcast-button {
-  // background-color: var(--darkYellow);
   border: 1px solid var(--darkYellow);
 }
 
+
 .hero {
   height: 100vh;
-  // width: 100vw;
   display: flex;
   flex-direction: column;
-  // flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0 50px;
-  // text-align: center;
+
   .move {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
     width: 100%;
-  //   min-width: 100px;
-  //   // margin: 0px 50px;
   }
   
-  img {
-    // margin: 0 50px;
-    // overflow-x: hidden;
-  }
   p {
     margin: -10px 0 0 0;
     text-transform: uppercase;
@@ -262,9 +223,11 @@ button:hover {
   }
 }
 
+
 #about .container {
   flex-wrap: wrap-reverse;
 }
+
 
 #about, #projects {
   padding: 100px 30px 20px;
@@ -282,12 +245,8 @@ button:hover {
     line-height: 1.7;
     max-width: 500px;
   }
-
-  // img {
-  //   max-width: 300px;
-  //   border-radius: 50%;
-  // }
 }
+
 
 #about { 
   img {
@@ -311,26 +270,17 @@ button:hover {
   .skills {
     display: flex;
     flex-flow: row wrap;
-    // flex-direction: row;
-    // align-items: center;
     justify-content: center;    
     font-size: 40px;
     max-width: 500px;
-    // padding: 0 150px;
+
     div {
       color: var(--forestGreen);
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 0 5px;
-      // img {
-      //   width: 50px;
-      //   // color: var(--forestGreen);
-      //   border-radius: 0;
-      //   svg {
-      //     fill-: var(--forestGreen);
-      //   }
-      // } 
+ 
       p {
         position: absolute;
         font-weight: 400;
@@ -338,7 +288,6 @@ button:hover {
         opacity: 0;
         max-width: 100%;
         text-align: center;
-
       }
     }
 
@@ -381,13 +330,11 @@ button:hover {
   }
 
   .buttons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-    svg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
-    }
     button {
       margin: 0 10px;
     }
@@ -403,7 +350,7 @@ button:hover {
     align-items: center;
     justify-content: space-evenly;
     font-size: 30px;
-    // padding: 0;
+
     div {
       padding: 0;
       color: var(--forestGreen);
@@ -441,8 +388,6 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: flex-start;
-  // text-align: center;
 
   h2 {
     margin-bottom: 20px;
@@ -479,14 +424,11 @@ button:hover {
     width: 400px;
     padding: 20px;
     justify-content: center;
-    // text-align: center;
 
     div {
       padding: 5px;
       font-size: 18px;
       width: 95%;
-      // overflow: hidden;
-      // font-weight: bold;
     }
 
     input, textarea {
@@ -524,14 +466,11 @@ button:hover {
         align-items: center;
         justify-content: center;
         margin: 0 20px;
-        // text-decoration: none;
         cursor: pointer;
         
         svg {
           color: var(--forestGreen);
         }
-        
-        // color: var(--ebony);
 
         p {
           position: absolute;
@@ -548,7 +487,7 @@ button:hover {
 
     div:hover {
       a {
-        // text-decoration: none;
+
         svg {
           color: var(--darkYellow);
           opacity: 0.7;
@@ -565,10 +504,6 @@ button:hover {
 
 }
 
-// .footer {
-//   position: relative;
-//   bottom: 0;
-// }
 
 iframe {
   .css-cpn8dn {
@@ -625,8 +560,6 @@ iframe {
     .hamburger-react {
       margin: 0 15px;
       display: block;
-      // display: initial;
-
     }
 
     .hide {
@@ -637,10 +570,7 @@ iframe {
       backdrop-filter: none;
     }
 
-
     ul {
-      // height: 100%;
-      // box-sizing: border-box;
       position: absolute;
       right: 0;
       margin: 50px 0;
@@ -667,19 +597,14 @@ iframe {
         border-top: none;
         border-right: 3px solid rgb(162, 162, 162);
       }
-
       
       .active {
         padding-right: 5px;
         border-top: none;
         border-right: 3px solid var(--darkYellow);
       }
-      
-
-
     }
   }
-
 
   .container {
     flex-wrap: wrap;
@@ -706,12 +631,10 @@ iframe {
 
 
   #about {
+    
     .container {
-      // display: block;
       width: 100%;
-      // max-width: 500px;
-      // display: flex;
-      // flex-wrap: wrap;
+
       .intro {
         width: 80%;
       }
@@ -721,11 +644,10 @@ iframe {
 
   #skills .skills {
     width: 80%;
-    // margin: 0px 40px;
   }
 
-
   #projects 
+
     .container {
     flex-wrap: wrap;
     }
@@ -737,8 +659,7 @@ iframe {
     }
 
     .description {
-      // width: 80%;
-      // padding: 0 30px 20px;
+      width: 80%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -756,16 +677,20 @@ iframe {
   #projects .icons {
     width: 100%;
     div {
-      margin: 0px 5px;
+      margin: 0px px;
     }
   }
 
   #contact {
-    // width: 80%;
-  
+    
+    a {
+      margin: 0 7px;
+    }    
+    
     form {
       width: 100%;
       margin: 0;
+
       input, textarea {
         width: 70%;
       }
@@ -773,6 +698,7 @@ iframe {
   }
 
   #podcast {
+
     .intro, h2 {
       width: 300px;
       margin: auto;
@@ -784,7 +710,6 @@ iframe {
 
       .anchorPlayer {
         width: 300px;
-        // height: 100;
         margin: auto;
       }
     }   
