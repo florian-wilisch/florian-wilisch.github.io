@@ -27,7 +27,7 @@ body, html {
   padding: 0;
   overflow-x: hidden;
   font-weight: 200;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
 
 body {
@@ -69,6 +69,11 @@ header {
   left: 0;
 }
 
+.nomargin{
+  margin: 0;
+  padding: 0;
+}
+
 .navigation{
   position: fixed;
   width: 100%;
@@ -81,6 +86,7 @@ header {
     width: 70px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     img {
       width: 100%;
@@ -115,30 +121,61 @@ header {
     }
   }
 
+  // li {
+  //   font-weight: 300;
+  //   font-size: 25px;
+  //   padding: 0 15px;
+  //   display: flex;
+  //   justify-content: center;
+  //   height: 100%;
+  //   cursor: pointer;
+  // }
+
+  // a {
+  //   text-decoration: none;
+  //   color: var(--ebony);
+  //   transition: all .1s linear;
+  //   border-top: 0px solid rgb(162, 162, 162);
+  //   height: 100%;
+  //   padding: 10px 0;
+  // }
+
   li {
     font-weight: 300;
     font-size: 25px;
-    padding: 0 15px;
+    padding: 10px 15px;
     display: flex;
     justify-content: center;
     height: 100%;
+    cursor: pointer;
+    color: var(--ebony);
+    transition: all .1s linear;
+    border-top: 0px solid rgb(162, 162, 162);
   }
 
   a {
     text-decoration: none;
     color: var(--ebony);
-    transition: all .1s linear;
-    border-top: 0px solid rgb(162, 162, 162);
     height: 100%;
-    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    // padding: 10px 0;
+    // .active {
+    //   border-top: none;
+    // }
+
   }
 
-  ul a:hover {
-    border-top: 4px solid rgb(162, 162, 162);
+  a.active, a.active:hover {
+    border-top: none
   }
 
-  .active {
+  .active, .active:hover {
     border-top: 4px solid var(--darkYellow);
+  }
+
+  ul div:hover {
+    border-top: 4px solid rgb(162, 162, 162);
   }
 
 }
@@ -164,12 +201,15 @@ button {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  outline: none;
 }
+
 
 button:hover {
   color: var(--forestGreen);
   background-color: var(--darkYellow); 
 }
+
 
 .green:hover {
   background-color: var(--forestGreen);
@@ -177,8 +217,15 @@ button:hover {
   color: var(--mistyBlue);
 }
 
+
 .podcast-button {
   border: 1px solid var(--darkYellow);
+}
+
+
+.nacked {
+  border: none;
+  text-transform: uppercase;
 }
 
 
@@ -197,20 +244,27 @@ button:hover {
     margin: -10px 0 0 0;
     text-transform: uppercase;
   }
+  
   a {
     text-decoration: none;
     color: var(--ebony);
   }
-}
 
-.nacked {
-  border: none;
-  font-size: 30px;
+  .nacked {
+    font-size: 30px;
+  }
 }
 
 .nacked:hover {
   background-color: var(--mistyBlue);
+  font-weight: bold;
 }
+
+.nacked.active {
+  border: none;
+  font-weight: bold;
+}
+
 
 .container {
   display: flex;
@@ -239,6 +293,12 @@ button:hover {
   
   div {
     padding: 20px;
+
+    .nomargin{
+      margin: 0;
+      padding: 0;
+    }
+
   }
 
   .intro {
@@ -286,8 +346,9 @@ button:hover {
         font-weight: 400;
         font-size: 20px;
         opacity: 0;
-        max-width: 100%;
+        max-width: 150px;
         text-align: center;
+        margin: auto;
       }
     }
 
@@ -311,14 +372,63 @@ button:hover {
     line-height: 1.7;
     max-width: 500px;
   }
-
 }
 
 
 #projects { 
+  
+  .selection {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      padding: 0;
+    }
+
+    svg {
+      margin: 0 5px;
+      font-size: 25px;
+    }
+
+    button {
+      padding: 5px;
+    }
+  }
+  
+  .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 0;
+  }
+
+  .techProjects  {
+    padding: 0;
+  }
+
+  .closed {
+    width: 0;
+    opacity: 0;
+  }
+
+  .open {
+    width: initial;
+    opacity: 1;
+  }
+
+
+
   img {
     max-width: 500px;
     border-radius: 0px;
+  }
+
+  .bizProjects {    
+    img {
+      max-width: 400px;
+      box-shadow: 5px 10px 8px #888888;
+    }
   }
 
   h3 {
@@ -338,6 +448,7 @@ button:hover {
     button {
       margin: 0 10px;
     }
+
     a {
       text-decoration: none;
       cursor: pointer;
@@ -352,7 +463,7 @@ button:hover {
     font-size: 30px;
 
     div {
-      padding: 0;
+      padding: 0 5px;
       color: var(--forestGreen);
       display: flex;
       align-items: center;
@@ -363,8 +474,9 @@ button:hover {
         font-weight: 400;
         font-size: 15px;
         opacity: 0;
-        max-width: 100%;
+        max-width: 100px;
         text-align: center;
+        margin: auto;
       }
     }
 
@@ -454,6 +566,9 @@ button:hover {
     margin: 20px;
     display: flex;
     flex-direction: row;
+    width: 500px;
+    justify-content: space-evenly;
+    // align-items: stretch;
     
     div {
     padding: 0;
@@ -465,7 +580,7 @@ button:hover {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 20px;
+        // margin: 0 20px;
         cursor: pointer;
         
         svg {
@@ -479,10 +594,9 @@ button:hover {
           opacity: 0;
           max-width: 100%;
           text-align: center;
+          margin: auto;
         }
       }
-
-
     }
 
     div:hover {
@@ -553,7 +667,7 @@ iframe {
 //* RESPONSIVE BEHAVIOUR
 
 //TABLETS
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
 
   .navigation {
   
@@ -588,22 +702,35 @@ iframe {
         backdrop-filter: blur(8px);
       }
 
-      a {
-        border-right: 0px solid rgb(162, 162, 162);
-        padding: 0 5px;
-      }
 
-      a:hover {
-        border-top: none;
-        border-right: 3px solid rgb(162, 162, 162);
-      }
-      
-      .active {
-        padding-right: 5px;
-        border-top: none;
-        border-right: 3px solid var(--darkYellow);
-      }
+
     }
+
+    // a {
+    //   border-right: 0px solid rgb(162, 162, 162);
+    //   padding: 0 5px;
+    // }
+
+    //  {
+    //   border-top: none;
+    // //   border-right: 3px solid rgb(162, 162, 162);
+    // }
+    
+    
+    a:hover, a.active {
+      border-top: none;
+      border-right: none;
+      padding-right: 0;
+    }
+
+    .active, .active:hover {
+      padding-right: 5px;
+      border-top: none;
+      border-right: 3px solid var(--darkYellow);
+    }
+
+
+
   }
 
   .container {
@@ -682,10 +809,10 @@ iframe {
   }
 
   #contact {
-    
-    a {
-      margin: 0 7px;
-    }    
+
+    .icons {
+      width: 80%;
+    } 
     
     form {
       width: 100%;

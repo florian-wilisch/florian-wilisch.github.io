@@ -1,5 +1,3 @@
-// import logo from './logo.svg';
-// import './App.css';
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -12,7 +10,14 @@ import Podcast from './components/Podcast'
 import { HashRouter, Switch, Route, BrowserRouter, Link } from 'react-router-dom'
 import './style.scss'
 
+import smoothscroll from 'smoothscroll-polyfill'
+
+
 function App() {
+
+  // smoothscroll.polyfill()
+  
+
   return (
     // <div className="App">
 <>
